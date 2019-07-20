@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Game from './Game';
 
 function App() {
-  const [currentStep, setCurrentStep] = useState(17);
+  const [currentStep, setCurrentStep] = useState(0);
 
   return (
     <>
