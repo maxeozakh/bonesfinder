@@ -1,0 +1,154 @@
+body,
+#globalwrapper {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  z-index: 1;
+  background: rgb(244, 244, 244);
+}
+
+#globalwrapper {
+  z-index: 2;
+}
+
+.icons-credentials {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#root {
+  width: 320px;
+  height: 320px;
+  font-size: 0.5em;
+  overscroll-behavior-y: contain;
+}
+
+.game {
+  overscroll-behavior-y: contain;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #221131;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 0.2s;
+  -webkit-transition: all 0.25s;
+  -webkit-transition-duration: 0.2s;
+  transition: all 1s;
+
+  * {
+    box-sizing: initial;
+  }
+}
+
+#defaultbackground,
+.defaultbackground {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #221131;
+  user-select: none;
+}
+
+#innerwrapper {
+  width: 100%;
+  position: relative;
+  background-color: #e9e9e9;
+  height: 100%;
+  user-select: none;
+}
+
+#hiddenmatrix {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  font-size: 1.5em;
+  position: relative;
+}
+
+#square {
+  width: 316px;
+  height: 316px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  cursor: grab;
+}
+
+.stablearea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 316px;
+  height: 316px;
+  user-select: none;
+}
+
+#backgroundmatrix {
+  height: 100%;
+}
+
+#second-square {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  outline: 1px solid gray;
+  top: 0;
+}
+
+#way {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: calc(50% - 10px);
+  top: 0;
+  display: block;
+}
+
+.gamematrix {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#fade {
+  background: black;
+  width: 316px;
+  height: 316px;
+  position: absolute;
+  opacity: 0;
+  top: 2px;
+  z-index: 22;
+  visibility: visible;
+  display: none;
+}
