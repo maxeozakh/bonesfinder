@@ -245,7 +245,6 @@ class Square extends Component {
   };
 
   componentDidMount() {
-    
     let player = document.getElementById('player');
     player = document.getElementById('player');
 
@@ -730,51 +729,68 @@ class Square extends Component {
 
                   if (val.winCondition) {
                     // WIIIN
+                    if (this.props.currentStep === 17) {
+                      console.log('congrats');
+                      let game = document.getElementById('game');
+                      let counter = 1;
 
-                    playerPositionMatrix = this.props.getPlayerPositionMatrix(
-                      currentBlock.floor,
-                      currentBlock.field,
-                      this.props.pathsMatrix
-                    );
+                      let opacityInterval = setInterval(() => {
+                        if (counter <= 0) {
+                          clearInterval(opacityInterval);
+                          setTimeout(() => {
+                            alert('congrats champ! 💀');
+                          }, 1000);
+                        }
 
-                    this.props.setPlayerPositionMatrix(playerPositionMatrix);
-                    let newGameMatrix = this.props.generateGameMatrix(
-                      this.props.stablePathsMatrix,
-                      this.props.unstablePathsMatrix,
-                      playerPositionMatrix,
-                      this.props.winPositionMatrix,
-                      this.props.pathsMatrix
-                    );
-                    this.props.setGameMatrix(newGameMatrix);
-                    this.props.setCalcPlayerPositionCoordinates();
+                        game.style.opacity = counter;
+                        counter -= 0.1;
+                      }, 5);
+                    } else {
+                      playerPositionMatrix = this.props.getPlayerPositionMatrix(
+                        currentBlock.floor,
+                        currentBlock.field,
+                        this.props.pathsMatrix
+                      );
 
-                    let game = document.getElementById('game');
-                    let counter = 1;
+                      this.props.setPlayerPositionMatrix(playerPositionMatrix);
+                      let newGameMatrix = this.props.generateGameMatrix(
+                        this.props.stablePathsMatrix,
+                        this.props.unstablePathsMatrix,
+                        playerPositionMatrix,
+                        this.props.winPositionMatrix,
+                        this.props.pathsMatrix
+                      );
+                      this.props.setGameMatrix(newGameMatrix);
+                      this.props.setCalcPlayerPositionCoordinates();
 
-                    let opacityInterval = setInterval(() => {
-                      if (counter <= 0) {
-                        clearInterval(opacityInterval);
-                      }
+                      let game = document.getElementById('game');
+                      let counter = 1;
 
-                      game.style.opacity = counter;
-                      counter -= 0.1;
-                    }, 5);
-                    setTimeout(() => {
-                      angle = 0;
-                      buffer = 0;
-                      mouseClampedOnPlayer = false;
+                      let opacityInterval = setInterval(() => {
+                        if (counter <= 0) {
+                          clearInterval(opacityInterval);
+                        }
 
-                      mouseClamped = false;
-                      direction = 0;
-                      prevDirection = 0;
-                      val = 0;
-                      currentBlock = 0;
-                      this.valuesForRotateMatrix();
+                        game.style.opacity = counter;
+                        counter -= 0.1;
+                      }, 5);
+                      setTimeout(() => {
+                        angle = 0;
+                        buffer = 0;
+                        mouseClampedOnPlayer = false;
 
-                      this.props.nextStep();
-                      this.props.resetLevel();
-                      this.props.setFinish();
-                    }, 900);
+                        mouseClamped = false;
+                        direction = 0;
+                        prevDirection = 0;
+                        val = 0;
+                        currentBlock = 0;
+                        this.valuesForRotateMatrix();
+
+                        this.props.nextStep();
+                        this.props.resetLevel();
+                        this.props.setFinish();
+                      }, 900);
+                    }
 
                     return;
                   } else {

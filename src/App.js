@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Game from './Game';
 
 function App() {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(17);
 
   return (
     <>
@@ -16,11 +16,12 @@ function App() {
       <br />
       <div className="icons-credentials">
         Icons made by{' '}
-        <a
-          href="https://www.freepik.com/?__hstc=57440181.4cf6e163e9446624018a4563f604be01.1563615619306.1563615619306.1563618543520.2&__hssc=57440181.5.1563618543520&__hsfp=874393295"
-          title="Freepik"
-        >
+        <a href="https://www.freepik.com/" title="Freepik">
           Freepik
+        </a>{' '}
+        and{' '}
+        <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">
+          Eucalyp
         </a>{' '}
         from{' '}
         <a href="https://www.flaticon.com/" title="Flaticon">

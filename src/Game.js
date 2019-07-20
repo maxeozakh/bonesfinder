@@ -1,7 +1,5 @@
-/* eslint-disable no-loop-func */
 import React, { Component, Fragment } from 'react';
 import Square from './Square/';
-// import MovingArea from './MovingArea';
 import getLevel from './Levels';
 
 const defaultLevelConfig = {
@@ -561,6 +559,7 @@ class Game extends Component {
 
       this.setDefaultGameMatrix(defaultGameMatrix);
 
+      // eslint-disable-next-line no-loop-func
       result = playerPositionMatrix.map((row, i) =>
         row.map((val, j) => {
           if (direction === 1) {
@@ -894,6 +893,7 @@ class Game extends Component {
           resetLevel={this.resetLevel}
           absoluteMatrix={this.state.absoluteMatrix}
           playerPositionMatrix={this.state.playerPositionMatrix}
+          currentStep={this.props.currentStep}
         />
       </Fragment>
     );
