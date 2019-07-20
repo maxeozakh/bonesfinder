@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div id="game" className="game">
+      <div id="game">
         <Game
           key={currentStep}
           currentStep={currentStep}

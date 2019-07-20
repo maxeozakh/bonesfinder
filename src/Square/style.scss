@@ -33,7 +33,7 @@ body {
   overscroll-behavior-y: contain;
 }
 
-.game {
+#game {
   overscroll-behavior-y: contain;
   box-sizing: border-box;
   text-align: center;
@@ -82,7 +82,7 @@ body {
   height: 100%;
 }
 
-.wrapper {
+#wrapper {
   font-size: 1.5em;
   position: relative;
 }
@@ -98,7 +98,7 @@ body {
   cursor: grab;
 }
 
-.stablearea {
+#stablearea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,7 +131,7 @@ body {
   display: block;
 }
 
-.gamematrix {
+#gamematrix {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

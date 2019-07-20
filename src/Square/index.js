@@ -1141,17 +1141,17 @@ class Square extends Component {
     ));
 
     return (
-      <div id="wrapper" className="wrapper">
+      <div id="wrapper">
         <Background>
           <div id="innerwrapper">
-            <div id="stablearea" className="stablearea">
+            <div id="stablearea">
               <div id="hiddenmatrix">{hiddenMatrix}</div>
               {staticArea}
               <Player id="player" blockSize={this.props.blockSize} />
             </div>
             <div id="square">
               <div id="way" />
-              <div id="gamematrix" className="gamematrix">
+              <div id="gamematrix">
                 <div id="checker" />
                 {dynamicGameMatrix}
               </div>
