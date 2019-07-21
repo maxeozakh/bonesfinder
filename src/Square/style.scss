@@ -26,6 +26,13 @@ body {
   right: 10px;
 }
 
+.description {
+  position: absolute;
+  top: calc(50% - 180px);
+  font-size: 12px;
+  margin: 0;
+} 
+
 #root {
   width: 320px;
   height: 320px;
