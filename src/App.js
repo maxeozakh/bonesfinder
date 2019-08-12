@@ -10,7 +10,7 @@ function App() {
         {currentStep === 0 && (
           <>
             <span hidden={currentStep !== 0} class="description">
-              Drag skeleton
+              Rotate game field and drag skeleton
             </span>
             <div className="icons-credentials">
               Icons made by{' '}
