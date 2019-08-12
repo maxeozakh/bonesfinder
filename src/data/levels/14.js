@@ -7,7 +7,7 @@ export default {
       { id: 1, value: 1, defaultFloor: 0, defaultField: 3, stable: true }
     ],
     [
-      { id: 4, value: 1, defaultFloor: 0, defaultField: 1, stable: true },
+      { id: 4, value: 1, defaultFloor: 1, defaultField: 0, stable: true },
       { id: 2, value: 1, defaultFloor: 1, defaultField: 1, stable: true },
       { id: 2, value: 1, defaultFloor: 1, defaultField: 2, stable: true },
       { id: 1, value: 1, defaultFloor: 1, defaultField: 3, stable: true }

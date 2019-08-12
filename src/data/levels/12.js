@@ -1,15 +1,15 @@
 export default {
   stablePathsMatrix: [
     [
+      { id: 0, value: 0, defaultFloor: 0, defaultField: 0, stable: false },
       { id: 0, value: 0, defaultFloor: 0, defaultField: 1, stable: false },
       { id: 0, value: 0, defaultFloor: 0, defaultField: 2, stable: false },
-      { id: 1, value: 1, defaultFloor: 0, defaultField: 0, stable: true },
       { id: 0, value: 0, defaultFloor: 0, defaultField: 3, stable: false }
     ],
     [
+      { id: 0, value: 0, defaultFloor: 1, defaultField: 0, stable: false },
       { id: 0, value: 0, defaultFloor: 1, defaultField: 1, stable: false },
-      { id: 0, value: 0, defaultFloor: 1, defaultField: 2, stable: false },
-      { id: 1, value: 1, defaultFloor: 1, defaultField: 0, stable: true },
+      { id: 1, value: 1, defaultFloor: 1, defaultField: 2, stable: true },
       { id: 1, value: 1, defaultFloor: 1, defaultField: 3, stable: true }
     ],
     [

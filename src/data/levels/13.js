@@ -20,7 +20,7 @@ export default {
     ],
     [
       { id: 0, value: 0, defaultFloor: 3, defaultField: 0, stable: false },
-      { id: 4, value: 1, defaultFloor: 3, defaultField: 2, stable: true },
+      { id: 4, value: 1, defaultFloor: 3, defaultField: 1, stable: true },
       { id: 4, value: 1, defaultFloor: 3, defaultField: 2, stable: true },
       { id: 4, value: 1, defaultFloor: 3, defaultField: 3, stable: true }
     ]
