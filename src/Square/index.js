@@ -268,8 +268,8 @@ class Square extends Component {
           ? this.prevCoordinates
           : this.wayCoordinates;
 
-        let { x: pX, y: pY } = this.prevCoordinates;
-        let { x: cX, y: cY } = this.wayCoordinates;
+        let { left: pX, top: pY } = this.prevCoordinates;
+        let { left: cX, top: cY } = this.wayCoordinates;
 
         if (cX === pX && cY === pY) {
           direction = 0;
@@ -318,8 +318,8 @@ class Square extends Component {
 
     const box = document.getElementById('square');
     const gameboard = document.getElementById('wrapper');
-    let xShift = box.getBoundingClientRect().left + box.offsetWidth / 2;
     let yShift = box.getBoundingClientRect().top + box.offsetHeight / 2;
+    let xShift = box.getBoundingClientRect().left + box.offsetWidth / 2;
 
     const boxCoordinates = box.getBoundingClientRect();
 
@@ -366,20 +366,20 @@ class Square extends Component {
                   rotateSquare(counter);
                   counter++;
                   player.style.top =
-                    fakePlayer.getBoundingClientRect().y -
+                    fakePlayer.getBoundingClientRect().top -
                     wrapper.getBoundingClientRect().top +
                     'px';
                   player.style.left =
-                    fakePlayer.getBoundingClientRect().x -
+                    fakePlayer.getBoundingClientRect().left -
                     wrapper.getBoundingClientRect().left +
                     'px';
                 } else {
                   player.style.top =
-                    fakePlayer.getBoundingClientRect().y -
+                    fakePlayer.getBoundingClientRect().top -
                     wrapper.getBoundingClientRect().top +
                     'px';
                   player.style.left = player.style.left =
-                    fakePlayer.getBoundingClientRect().x -
+                    fakePlayer.getBoundingClientRect().left -
                     wrapper.getBoundingClientRect().left +
                     'px';
                   isRotate = false;
@@ -405,20 +405,20 @@ class Square extends Component {
                   counter--;
 
                   player.style.top =
-                    fakePlayer.getBoundingClientRect().y -
+                    fakePlayer.getBoundingClientRect().top -
                     wrapper.getBoundingClientRect().top +
                     'px';
                   player.style.left =
-                    fakePlayer.getBoundingClientRect().x -
+                    fakePlayer.getBoundingClientRect().left -
                     wrapper.getBoundingClientRect().left +
                     'px';
                 } else {
                   player.style.top =
-                    fakePlayer.getBoundingClientRect().y -
+                    fakePlayer.getBoundingClientRect().top -
                     wrapper.getBoundingClientRect().top +
                     'px';
                   player.style.left =
-                    fakePlayer.getBoundingClientRect().x -
+                    fakePlayer.getBoundingClientRect().left -
                     wrapper.getBoundingClientRect().left +
                     'px';
                   isRotate = false;
@@ -451,20 +451,20 @@ class Square extends Component {
                   counter++;
 
                   player.style.top =
-                    fakePlayer.getBoundingClientRect().y -
+                    fakePlayer.getBoundingClientRect().top -
                     wrapper.getBoundingClientRect().top +
                     'px';
                   player.style.left =
-                    fakePlayer.getBoundingClientRect().x -
+                    fakePlayer.getBoundingClientRect().left -
                     wrapper.getBoundingClientRect().left +
                     'px';
                 } else {
                   player.style.top =
-                    fakePlayer.getBoundingClientRect().y -
+                    fakePlayer.getBoundingClientRect().top -
                     wrapper.getBoundingClientRect().top +
                     'px';
                   player.style.left =
-                    fakePlayer.getBoundingClientRect().x -
+                    fakePlayer.getBoundingClientRect().left -
                     wrapper.getBoundingClientRect().left +
                     'px';
                   isRotate = false;
@@ -490,20 +490,20 @@ class Square extends Component {
                   counter--;
 
                   player.style.top =
-                    fakePlayer.getBoundingClientRect().y -
+                    fakePlayer.getBoundingClientRect().top -
                     wrapper.getBoundingClientRect().top +
                     'px';
                   player.style.left =
-                    fakePlayer.getBoundingClientRect().x -
+                    fakePlayer.getBoundingClientRect().left -
                     wrapper.getBoundingClientRect().left +
                     'px';
                 } else {
                   player.style.top =
-                    fakePlayer.getBoundingClientRect().y -
+                    fakePlayer.getBoundingClientRect().top -
                     wrapper.getBoundingClientRect().top +
                     'px';
-                  player.style.left = player.style.left =
-                    fakePlayer.getBoundingClientRect().x -
+                  player.style.left =
+                    fakePlayer.getBoundingClientRect().left -
                     wrapper.getBoundingClientRect().left +
                     'px';
                   isRotate = false;
@@ -650,10 +650,10 @@ class Square extends Component {
           let playerPositionMatrix;
 
           let playerSidesCoordinates = [
-            player.getBoundingClientRect().top - boxCoordinates.y,
-            player.getBoundingClientRect().right - boxCoordinates.x,
-            player.getBoundingClientRect().bottom - boxCoordinates.y,
-            player.getBoundingClientRect().left - boxCoordinates.x
+            player.getBoundingClientRect().top - boxCoordinates.top,
+            player.getBoundingClientRect().right - boxCoordinates.left,
+            player.getBoundingClientRect().bottom - boxCoordinates.top,
+            player.getBoundingClientRect().left - boxCoordinates.left
           ];
 
           let myBlock;

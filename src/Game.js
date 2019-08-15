@@ -714,18 +714,18 @@ class Game extends Component {
 
     promise1.then(value => {
       player.style.top =
-        playerPosition.getBoundingClientRect().y -
+        playerPosition.getBoundingClientRect().top -
         wrapper.getBoundingClientRect().top +
         'px';
       player.style.left =
-        playerPosition.getBoundingClientRect().x -
+        playerPosition.getBoundingClientRect().left -
         wrapper.getBoundingClientRect().left +
         'px';
 
       let playerPositionCoordinates = [
-        playerPosition.getBoundingClientRect().y -
+        playerPosition.getBoundingClientRect().top -
           wrapper.getBoundingClientRect().top,
-        playerPosition.getBoundingClientRect().x -
+        playerPosition.getBoundingClientRect().left -
           wrapper.getBoundingClientRect().left
       ];
       this.setState({
@@ -741,8 +741,8 @@ class Game extends Component {
     let wrapper = document.getElementById('wrapper');
 
     let unitCoordinates = [
-      unit.getBoundingClientRect().y - wrapper.getBoundingClientRect().top,
-      unit.getBoundingClientRect().x - wrapper.getBoundingClientRect().left
+      unit.getBoundingClientRect().top - wrapper.getBoundingClientRect().top,
+      unit.getBoundingClientRect().left - wrapper.getBoundingClientRect().left
     ];
     return unitCoordinates;
   }
