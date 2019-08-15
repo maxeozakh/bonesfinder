@@ -7,7 +7,7 @@ import targetIcon from './target.png';
 
 const Background = styled.div`
   height: 100%;
-  padding: 2px;
+  width: 100%;
   background: ${props =>
     props.staticArea
       ? 'transparent'

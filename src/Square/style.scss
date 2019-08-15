@@ -31,7 +31,7 @@ body {
   top: calc(50% - 180px);
   font-size: 12px;
   margin: 0;
-} 
+}
 
 #root {
   width: 320px;
@@ -41,6 +41,8 @@ body {
 }
 
 #game {
+  width: 100%;
+  height: 100%;
   overscroll-behavior-y: contain;
   box-sizing: border-box;
   text-align: center;
@@ -92,11 +94,15 @@ body {
 #wrapper {
   font-size: 1.5em;
   position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  box-sizing: border-box;
 }
 
 #square {
-  width: 316px;
-  height: 316px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -110,8 +116,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  width: 316px;
-  height: 316px;
+  width: 100%;
+  height: 100%;
   user-select: none;
 }
 
