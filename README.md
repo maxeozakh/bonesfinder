@@ -1,5 +1,7 @@
 A simple game about finding a path, built on the rotation of matrices, made for practice
 
+UPD: this codebase is garbage, but still looks good
+
 ##
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
