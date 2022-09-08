@@ -1,6 +1,6 @@
 A simple game about finding a path, built on the rotation of matrices, made for practice
 
-UPD: this codebase is garbage
+UPD: codebase is garbage but that was funny to do
 
 ##
 
