@@ -1,5 +1,7 @@
 A simple game about finding a path, built on the rotation of matrices, made for practice
 
+![example of the game](https://raw.githubusercontent.com/maxeozakh/bonesfinder/master/example.gif)
+
 UPD: codebase is garbage but that was funny to do
 
 ##
